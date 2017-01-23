@@ -18,27 +18,43 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+  Fast Tourney
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  Setting up a tournament quickly and easily.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  Fast Tourney makes it fast and easy to create a tournament. This can be used among a small group of friends or a global tournament.
 
 ## Problem ##
   > Describe the problem your product solves.
+  Tournaments take a lot of work to set up and keep track of. Fast Tourney allows people to make and maintain a tournament easily.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+  Fast Tourney allows you to log in and see current tournaments and create new ones.
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+  "Fast Tourney takes care of the setup so you can get back in the game!"
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
+  Fast Tourney takes three steps. Step one, log in. Step two, create or update tournament. Step three, go have fun.
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  "There is no better way to set up a last minute tournament then with Fast Tourney"
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+  Instructions for how to use Fast Tourney can be found at **********.com
+
+
+
+
+
+
+
