@@ -1,0 +1,6 @@
+'use strict';
+
+exports.renderIndex = function (req, res) {
+  res.render('../index.html');
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NlcnZlci9yZXF1ZXN0LWhhbmRsZXIuanMiXSwibmFtZXMiOlsiZXhwb3J0cyIsInJlbmRlckluZGV4IiwicmVxIiwicmVzIiwicmVuZGVyIl0sIm1hcHBpbmdzIjoiOztBQUFBQSxRQUFRQyxXQUFSLEdBQXNCLFVBQVNDLEdBQVQsRUFBY0MsR0FBZCxFQUFtQjtBQUN2Q0EsTUFBSUMsTUFBSixDQUFXLGVBQVg7QUFDRCxDQUZEIiwiZmlsZSI6InJlcXVlc3QtaGFuZGxlci5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydHMucmVuZGVySW5kZXggPSBmdW5jdGlvbihyZXEsIHJlcykge1xuICByZXMucmVuZGVyKCcuLi9pbmRleC5odG1sJylcbn1cbiJdfQ==

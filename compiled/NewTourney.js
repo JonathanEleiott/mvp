@@ -1,0 +1,8 @@
+"use strict";
+
+var NewTourney = React.createElement(
+  "div",
+  null,
+  "NewTourney!"
+);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL05ld1RvdXJuZXkuanN4Il0sIm5hbWVzIjpbIk5ld1RvdXJuZXkiXSwibWFwcGluZ3MiOiI7O0FBQUEsSUFBSUEsYUFDRjtBQUFBO0FBQUE7QUFBQTtBQUFBLENBREYiLCJmaWxlIjoiTmV3VG91cm5leS5qcyIsInNvdXJjZXNDb250ZW50IjpbInZhciBOZXdUb3VybmV5ID0gKFxuICA8ZGl2PlxuICAgIE5ld1RvdXJuZXkhXG4gIDwvZGl2PlxuKVxuIl19
