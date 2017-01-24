@@ -37,12 +37,14 @@ class App extends React.Component {
 
   //POST A NEW TOURNAMENT TO THE DATABASE
   postTourneyToDatabase(tournamentName, username, points) {
+    var context = this;
+    console.log('axiosPOST')
     axios.post('/', {
       tournamentName: tournamentName,
       username: username,
       points: points
     }).then(function(res) {
-      console.log('tournament posted');
+      context.switchToShowAllTourneyView();
     }).catch(function(err) {
       console.log('err', err);
     })
@@ -52,7 +54,7 @@ class App extends React.Component {
     if (this.state.showAllTourneys) {
       return (
         <div>
-          <button onClick={() => this.switchToShowAllTourneyView();}>Show All Tourneys</button>
+          <button onClick={() => this.switchToShowAllTourneyView()}>Show All Tourneys</button>
           <button onClick={() => this.switchToNewTourneyView()}>Start A New Tourney</button>
           <div>
             <AllTourneys tournaments={this.state.tournaments}/>
