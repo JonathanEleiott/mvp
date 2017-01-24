@@ -4,7 +4,7 @@ class App extends React.Component {
     this.state = {
       showAllTourneys: false,
       showNewTourney: true,
-      tournaments: [{tournamentName:'Jon'}, {tournamentName:'Bill'}]
+      tournaments: [{tournamentName:'Monickers'}, {tournamentName:'Avalon'}]
     }
   }
 
@@ -13,6 +13,7 @@ class App extends React.Component {
   //   this.state.players.push(allTournaments)
   // })
 
+  //SWITCH VIEWS BETWEEN CREATE A NEW TOURNEY AND SHOW ALL TOURNEYS
   switchToNewTourneyView() {
     this.setState({
       showAllTourneys: false,
@@ -24,6 +25,19 @@ class App extends React.Component {
     this.setState({
       showAllTourneys: true,
       showNewTourney: false
+    })
+  }
+
+  //POST A NEW TOURNAMENT TO THE DATABASE
+  postTourneyToDatabase(tournamentName, username, points) {
+    axios.post('/', {
+      tournamentName: tournamentName,
+      username: username,
+      points: points
+    }).then(function(res) {
+      console.log('tournament posted');
+    }).catch(function(err) {
+      console.log('err', err);
     })
   }
 
@@ -44,7 +58,7 @@ class App extends React.Component {
           <button onClick={() => this.switchToShowAllTourneyView()}>Show All Tourneys</button>
           <button onClick={() => this.switchToNewTourneyView()}>Start A New Tourney</button>
           <div>
-            <NewTourney />
+            <NewTourney postTourney={this.postTourneyToDatabase.bind(this)}/>
           </div>
         </div>
       )

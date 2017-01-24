@@ -1,10 +1,13 @@
-var NewTourney = (props) => (
+var NewTourney = ({postTourney}) => (
   <div className="componentBox">
     <form>
-      <p>Tourney Name <input></input></p>
       <h2 className="title">Start New Tourney</h2>
-      <button>New Player!</button>
-      <button>Submit</button>
+      <p>Tourney Name <input name="tourneyName"></input></p>
+      <div onClick={() => {
+          $(".addPlayerOrTeam").append("<p>New Player or Team Name <input name='player'></input></p>");
+        }}>Add New Player Or Team</div>
+      <div className="addPlayerOrTeam"></div>
+      <button onClick={() => {postTourney(tourneyName, )}}>Submit</button>
     </form>
   </div>
 )
