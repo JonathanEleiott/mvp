@@ -1,10 +1,11 @@
-var db = require('../db/userSchema');
+//OTHER FILES
+var db = require('../db/setup.js');
+var userSchema = require('../db/userSchema');
 var handler = require('./request-handler');
+
+//EXPRESS
 var express = require('express');
-var bluebird = require('bluebird');
 var app = express();
-// var mongoose = require('mongoose');
-// mongoose.Promise = bluebird;
 
 app.set('views', __dirname + '/../');
 app.engine('html', require('ejs').renderFile);

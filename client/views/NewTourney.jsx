@@ -1,6 +1,10 @@
 var NewTourney = (props) => (
   <div className="componentBox">
-    <h2 className="title">New Tourney</h2>
-    <button>New Player!</button>
+    <form>
+      <p>Tourney Name <input></input></p>
+      <h2 className="title">Start New Tourney</h2>
+      <button>New Player!</button>
+      <button>Submit</button>
+    </form>
   </div>
 )
