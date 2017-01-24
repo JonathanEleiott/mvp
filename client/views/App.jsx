@@ -4,19 +4,25 @@ class App extends React.Component {
     this.state = {
       showAllTourneys: false,
       showNewTourney: true,
-      tournaments: [{tournamentName:'Monickers'}, {tournamentName:'Avalon'}]
+      tournaments: []
     }
   }
 
   //RETRIEVE ALL THE TOURNAMENTS FROM DATABASE
   retrieveAllTournaments() {
+    var context = this;
+    console.log('retrieveAllTournaments')
     axios.get('/tourneys').then(function(tourneys) {
-      console.log('tourneys', tourneys);
       var tourneyArray = [];
       tourneyArray.push(tourneys);
-      this.setState({
-        tournaments: tourneyArray
+      console.log('tourneyArray', tourneyArray)
+      context.setState({
+        showAllTourneys: true,
+        showNewTourney: false,
+        tournaments: tourneyArray[0].data
       })
+    }).catch(function(err) {
+      console.log('err', err);
     })
   }
 
@@ -25,14 +31,11 @@ class App extends React.Component {
     this.setState({
       showAllTourneys: false,
       showNewTourney: true
-    })
+    });
   }
 
   switchToShowAllTourneyView() {
-    this.setState({
-      showAllTourneys: true,
-      showNewTourney: false
-    })
+    this.retrieveAllTournaments();
   }
 
   //POST A NEW TOURNAMENT TO THE DATABASE
