@@ -4,7 +4,8 @@ class App extends React.Component {
     this.state = {
       showAllTourneys: false,
       showNewTourney: true,
-      tournaments: []
+      tournaments: [],
+      players: []
     }
   }
 
@@ -14,12 +15,17 @@ class App extends React.Component {
     console.log('retrieveAllTournaments')
     axios.get('/tourneys').then(function(tourneys) {
       var tourneyArray = [];
+      var playerArray = [];
       tourneyArray.push(tourneys);
+      for (var i  = 0; i < tourneyArray[0].data.length; i++) {
+        playerArray.push(tourneyArray[0].data[i].players);
+      }
       console.log('tourneyArray', tourneyArray)
       context.setState({
         showAllTourneys: true,
         showNewTourney: false,
-        tournaments: tourneyArray[0].data
+        tournaments: tourneyArray[0].data,
+        players: playerArray
       })
     }).catch(function(err) {
       console.log('err', err);
@@ -43,9 +49,9 @@ class App extends React.Component {
     var context = this;
     console.log('axiosPOST')
     axios.post('/', {
-      tournamentName: tournamentName,
-      username: username,
-      points: points
+      tournamentName,
+      username,
+      points
     }).then(function(res) {
       context.switchToShowAllTourneyView();
     }).catch(function(err) {
@@ -60,7 +66,7 @@ class App extends React.Component {
           <button onClick={() => this.switchToShowAllTourneyView()}>Show All Tourneys</button>
           <button onClick={() => this.switchToNewTourneyView()}>Start A New Tourney</button>
           <div>
-            <AllTourneys tournaments={this.state.tournaments}/>
+            <AllTourneys tournaments={this.state.tournaments} players={this.state.players}/>
           </div>
         </div>
       )

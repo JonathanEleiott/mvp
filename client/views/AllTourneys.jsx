@@ -1,4 +1,6 @@
-var AllTourneys = ({tournaments}) => (
+var AllTourneys = ({tournaments, players}) => {
+  console.log('players', players)
+  return (
   <div className="componentBox">
     <h2 className="title">Show All Tourneys!</h2>
     <table>
@@ -8,5 +10,14 @@ var AllTourneys = ({tournaments}) => (
         )}
       </tbody>
     </table>
+    <table>
+      <tbody>
+        {players.map((player, key) =>
+          (
+            <PlayerList player={player} key={key}/>
+          )
+        )}
+      </tbody>
+    </table>
   </div>
-)
+)}

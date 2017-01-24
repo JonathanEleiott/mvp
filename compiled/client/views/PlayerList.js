@@ -1,0 +1,16 @@
+'use strict';
+
+var PlayerList = function PlayerList(_ref) {
+  var player = _ref.player;
+
+  console.log('player', player);
+
+  return React.createElement(
+    'tr',
+    null,
+    player.map(function (name) {
+      return React.createElement(Name, { name: name });
+    })
+  );
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2NsaWVudC92aWV3cy9QbGF5ZXJMaXN0LmpzeCJdLCJuYW1lcyI6WyJQbGF5ZXJMaXN0IiwicGxheWVyIiwiY29uc29sZSIsImxvZyIsIm1hcCIsIm5hbWUiXSwibWFwcGluZ3MiOiI7O0FBQUEsSUFBSUEsYUFBYSxTQUFiQSxVQUFhLE9BQWM7QUFBQSxNQUFaQyxNQUFZLFFBQVpBLE1BQVk7O0FBQzdCQyxVQUFRQyxHQUFSLENBQVksUUFBWixFQUFzQkYsTUFBdEI7O0FBRUEsU0FDRTtBQUFBO0FBQUE7QUFDR0EsV0FBT0csR0FBUCxDQUFXLFVBQUNDLElBQUQ7QUFBQSxhQUNSLG9CQUFDLElBQUQsSUFBTSxNQUFNQSxJQUFaLEdBRFE7QUFBQSxLQUFYO0FBREgsR0FERjtBQVFELENBWEQiLCJmaWxlIjoiUGxheWVyTGlzdC5qcyIsInNvdXJjZXNDb250ZW50IjpbInZhciBQbGF5ZXJMaXN0ID0gKHtwbGF5ZXJ9KSA9PiB7XG4gIGNvbnNvbGUubG9nKCdwbGF5ZXInLCBwbGF5ZXIpO1xuXG4gIHJldHVybiAoXG4gICAgPHRyPlxuICAgICAge3BsYXllci5tYXAoKG5hbWUpID0+IChcbiAgICAgICAgICA8TmFtZSBuYW1lPXtuYW1lfS8+XG4gICAgICAgIClcbiAgICAgICl9XG4gICAgPC90cj5cbiAgKVxufVxuIl19
