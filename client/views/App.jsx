@@ -8,10 +8,17 @@ class App extends React.Component {
     }
   }
 
-  // this.props.retrieveAllTournaments(allTournaments) =>
-  // this.setState({
-  //   this.state.players.push(allTournaments)
-  // })
+  //RETRIEVE ALL THE TOURNAMENTS FROM DATABASE
+  retrieveAllTournaments() {
+    axios.get('/tourneys').then(function(tourneys) {
+      console.log('tourneys', tourneys);
+      var tourneyArray = [];
+      tourneyArray.push(tourneys);
+      this.setState({
+        tournaments: tourneyArray
+      })
+    })
+  }
 
   //SWITCH VIEWS BETWEEN CREATE A NEW TOURNEY AND SHOW ALL TOURNEYS
   switchToNewTourneyView() {
@@ -45,7 +52,7 @@ class App extends React.Component {
     if (this.state.showAllTourneys) {
       return (
         <div>
-          <button onClick={() => this.switchToShowAllTourneyView()}>Show All Tourneys</button>
+          <button onClick={() => this.switchToShowAllTourneyView();}>Show All Tourneys</button>
           <button onClick={() => this.switchToNewTourneyView()}>Start A New Tourney</button>
           <div>
             <AllTourneys tournaments={this.state.tournaments}/>

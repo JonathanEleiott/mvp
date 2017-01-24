@@ -16,9 +16,9 @@ app.set('view engine', 'html')
 app.use(express.static(__dirname + '/../'));
 
 app.get('/', handler.renderIndex);
-app.post('/', function() {
-  console.log('here');
-});
+app.post('/', handler.sendInfoToDatabase);
+
+app.get('/tourneys', handler.getTourneysFromDatabase);
 
 app.listen(3000, function() {
   console.log('listening on port 3000');

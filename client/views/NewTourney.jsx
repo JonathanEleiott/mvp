@@ -7,7 +7,7 @@ var NewTourney = ({postTourney}) => (
           $(".addPlayerOrTeam").append("<p>New Player or Team Name <input name='player'></input></p>");
         }}>Add New Player Or Team</div>
       <div className="addPlayerOrTeam"></div>
-      <button type="submit" >Submit</button>
+      <button type="submit">Submit</button>
     </form>
   </div>
 )
