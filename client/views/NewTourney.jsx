@@ -8,11 +8,11 @@ var NewTourney = ({postTourney}) => (
       <div className="addPlayerOrTeam"></div>
       <button type="submit" onClick={() => {
           var tournName = $('input[name=tourneyName]').val();
-          var playerNames = [];
+          var playerNames = {};
           $('input').each(function(index) {
-            playerNames.push($(this).val());
+            playerNames[$(this).val())] = 0;
           });
-          postTourney(tournName, playerNames.slice(1), 0)
+          postTourney(tournName, playerNames)
         }
       }>Submit</button>
   </div>

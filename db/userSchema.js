@@ -5,8 +5,7 @@ mongoose.Promise = bluebird;
 
 var tournamentSchema = mongoose.Schema({
   tournamentName: String,
-  username: Array,
-  points: Array
+  username: Array
 })
 
 var Tournament = mongoose.model('Tournament', tournamentSchema);

@@ -45,13 +45,12 @@ class App extends React.Component {
   }
 
   //POST A NEW TOURNAMENT TO THE DATABASE
-  postTourneyToDatabase(tournamentName, username, points) {
+  postTourneyToDatabase(tournamentName, players) {
     var context = this;
     console.log('axiosPOST')
     axios.post('/', {
       tournamentName,
-      username,
-      points
+      players
     }).then(function(res) {
       context.switchToShowAllTourneyView();
     }).catch(function(err) {

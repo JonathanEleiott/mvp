@@ -1,4 +1,4 @@
-var allTourneys = [{tournamentName:'Monickers', players: ['jon', 'bill']}, {tournamentName:'Avalon', players: ['ken', 'barbie']}];
+var allTourneys = [{tournamentName:'Monickers', players: ['jon', 'bill']}, {tournamentName:'Avalon', players: ['ken', 'barbie', 'tang']}];
 
 exports.renderIndex = function(req, res) {
   res.render('../index');
